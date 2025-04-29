@@ -8,5 +8,9 @@ fi
 # Execute postinstall to auto-populate config.yaml with missing values
 npm run postinstall
 
+echo "Ensuring data directory exists..."
+mkdir -p /home/node/app/data
+echo "Data directory ensured."
+
 # Start the server
 exec node server.js --listen "$@"
