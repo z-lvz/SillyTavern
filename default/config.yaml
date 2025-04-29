@@ -61,7 +61,7 @@ requestProxy:
     - localhost
     - 127.0.0.1
 # Enable multi-user mode
-enableUserAccounts: false
+enableUserAccounts: true
 # Enable discreet login mode: hides user list on the login screen
 enableDiscreetLogin: false
 # Enable's authlia based auto login. Only enable this if you
@@ -200,7 +200,7 @@ openai:
 # -- DEEPL TRANSLATION CONFIGURATION --
 deepl:
   # Available options: default, more, less, prefer_more, prefer_less
-  formality: default
+  formality: 默认
 # -- MISTRAL API CONFIGURATION --
 mistral:
   # Enables prefilling of the reply with the last assistant message in the prompt
