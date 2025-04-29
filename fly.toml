@@ -22,6 +22,6 @@ primary_region = 'hkg'
     hard_limit = 9999999999
 
 [mounts]
-  source="tavern_data"       
+  source="tavern_db"       
   destination="/home/node/app/public"
     
