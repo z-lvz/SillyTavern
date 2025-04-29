@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for sillytavern-z on 2025-04-29T17:10:40Z
+# fly.toml app configuration file generated for sillytavern-z on 2025-04-29T18:31:23Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -11,17 +11,13 @@ primary_region = 'hkg'
 [http_service]
   internal_port = 8000
   force_https = true
-  auto_stop_machines = 'off'
+  auto_stop_machines = 'stop'
   auto_start_machines = true
-  min_machines_running = 1
+  min_machines_running = 0
   processes = ['app']
 
-  [http_service.concurrency]
-    type       = "connections"
-    soft_limit = 99999
-    hard_limit = 9999999999
-
-[mounts]
-  source="tavern_data"       
-  destination="/home/node/app/public"
-    
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 2
+  memory_mb = 4096
